@@ -1,11 +1,253 @@
 <!doctype html>
-<html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Portfolio</title>
-  </head>
-  <body>
-    <p>ESTE ES MI PORTFOLIO</p>
-  </body>
+<html lang="es">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>André Hernández · Portafolio</title>
+<meta name="description" content="Portafolio de André Alain Hernández Castañeda, desarrollador Full Stack y estudiante de Ciencia de Datos en la Ciudad de México.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Bricolage+Grotesque:opsz,wght@12..96,500;12..96,700;12..96,800&family=IBM+Plex+Sans:wght@400;500;600&family=IBM+Plex+Mono:wght@400;500&display=swap">
+<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+
+<header class="top" id="topbar">
+  <div class="wrap">
+    <a class="brand" href="#inicio">ANDRÉ<span>.</span>HC</a>
+    <nav class="links" id="nav" aria-label="Secciones">
+      <span class="hover-ind" id="hind" aria-hidden="true"></span>
+      <span class="pill-ind" id="ind" aria-hidden="true"></span>
+      <a href="#inicio" data-i18n="nav_home">Inicio</a>
+      <a href="#proyectos" data-i18n="nav_projects">Proyectos</a>
+      <a href="#experiencia" data-i18n="nav_exp">Experiencia</a>
+      <a href="#sobre-mi" data-i18n="nav_about">Sobre mí</a>
+      <a href="#habilidades" data-i18n="nav_soft">Habilidades</a>
+      <a href="#tecnologias" data-i18n="nav_skills">Tecnologías</a>
+      <a href="#contacto" data-i18n="nav_contact">Contacto</a>
+    </nav>
+    <div class="tools">
+      <div class="seg" role="group" aria-label="Tema">
+        <button id="th-light" type="button" aria-pressed="false" data-i18n="t_light">Claro</button>
+        <button id="th-dark" type="button" aria-pressed="false" data-i18n="t_dark">Oscuro</button>
+      </div>
+      <div class="seg" role="group" aria-label="Idioma">
+        <button id="btn-es" type="button" aria-pressed="true">ES</button>
+        <button id="btn-en" type="button" aria-pressed="false">EN</button>
+      </div>
+    </div>
+    <button type="button" class="menu-btn" id="menu-btn" aria-expanded="false" aria-controls="mnav" aria-label="Abrir menú"><span class="bars"><i></i><i></i><i></i></span></button>
+  </div>
+  <div class="mnav" id="mnav"><div class="wrap"><div id="mlinks"></div><div class="mtools" id="mtools"></div></div></div>
+  <span class="progress" id="progress" aria-hidden="true"></span>
+</header>
+
+<main class="wrap">
+  <div class="panel hero" id="inicio" data-logo="react">
+    <div>
+      <h1>André Alain Hernández Castañeda</h1>
+      <p class="role" data-i18n="headline">Desarrollador Full Stack · Estudiante de Ciencia de Datos</p>
+      <p class="lede" data-i18n="lede">Durante dos años desarrollé una plataforma web que hoy está en producción. Trabajé en todas sus partes: la interfaz, la API, el inicio de sesión, las funciones en tiempo real y la base de datos. Actualmente estudio Ciencia de Datos en ESCOM, donde trabajo con ETL, Python y Power BI.</p>
+      <div class="cta">
+        <a class="btn primary" href="#proyectos"><span data-i18n="cta_projects">Ver proyectos</span> <span class="arr" aria-hidden="true">↓</span></a>
+        <a class="btn" href="https://github.com/Lycanites" target="_blank" rel="noopener">GitHub</a>
+        <a class="btn" href="https://www.linkedin.com/in/andre-hernandez958/" target="_blank" rel="noopener">LinkedIn</a>
+      </div>
+    </div>
+    <div class="side">
+      <aside class="facts" aria-label="Datos rápidos">
+        <div class="fact"><b>2</b><span data-i18n="f1">años como desarrollador Full Stack en DENKO</span></div>
+        <div class="fact"><b>6</b><span data-i18n="f2">personas en el equipo de Logus, donde fui el desarrollador principal</span></div>
+        <div class="fact"><b>C1</b><span data-i18n="f3">nivel de inglés. Español nativo</span></div>
+        <div class="fact"><b>15</b><span data-i18n="f4">años tenía cuando empecé a programar, con Java</span></div>
+      </aside>
+    </div>
+  </div>
+
+  <section id="proyectos" class="panel" data-logo="typescript">
+    <div class="sec-head"><h2 data-i18n="h_projects">Proyectos</h2><span class="label" data-i18n="l_projects">Publicados y funcionando</span></div>
+
+    <article class="project">
+      <div>
+        <h3>Logus</h3>
+        <p class="kind" data-i18n="logus_kind">DENKO · 2023–2025</p>
+        <span class="tag" data-i18n="tag_prod">En producción</span>
+      </div>
+      <div>
+        <p class="desc" data-i18n="logus_desc">Aplicación web de entrenamiento mental basada en juegos. Incluye cuatro áreas (memoria, lógica, lectura y análisis), varios modos de juego, una tienda y perfiles de usuario. Fui el desarrollador principal.</p>
+        <ul>
+          <li data-i18n="logus_1">Desarrollé la interfaz con React 18, TypeScript y Tailwind: navegación, ventanas modales, configuración, carrusel y audio.</li>
+          <li data-i18n="logus_2">Construí la API con Node.js y Express, con inicio de sesión mediante JWT, contraseñas cifradas con bcrypt y rutas protegidas.</li>
+          <li data-i18n="logus_3">Implementé el modo multijugador en tiempo real con WebSockets, para que varios usuarios jueguen al mismo tiempo.</li>
+          <li data-i18n="logus_4">Usé MySQL y PostgreSQL para los datos, Docker para los entornos y Render para publicar el backend.</li>
+        </ul>
+        <div class="stack"><span>React 18</span><span>TypeScript</span><span>Tailwind</span><span>Node.js</span><span>Express</span><span>JWT</span><span>bcrypt</span><span>WebSockets</span><span>MySQL</span><span>PostgreSQL</span><span>Docker</span><span>Render</span></div>
+        <div class="plinks"><a class="xbtn" href="https://github.com/Lycanites/Logus-React" target="_blank" rel="noopener"><span data-i18n="see_code">Ver el código en GitHub</span> <span class="arr" aria-hidden="true">→</span></a></div>
+      </div>
+    </article>
+
+    <article class="project">
+      <div>
+        <h3>DANA</h3>
+        <p class="kind" data-i18n="dana_kind">Proyecto personal</p>
+        <span class="tag" data-i18n="tag_demo">Demo disponible</span>
+      </div>
+      <div>
+        <p class="desc" data-i18n="dana_desc">Herramienta para limpiar archivos de Excel y CSV. El usuario sube un archivo con errores y lo recibe ordenado. Todo se procesa en el navegador, así que el archivo nunca se envía a un servidor.</p>
+        <ul>
+          <li data-i18n="dana_1">Detecta celdas vacías, filas repetidas, espacios sobrantes y números o fechas guardados como texto.</li>
+          <li data-i18n="dana_2">Cuando una fecha es ambigua o un valor parece fuera de rango, lo señala sin modificarlo. El usuario decide qué corregir.</li>
+          <li data-i18n="dana_3">Procesa los archivos en segundo plano con Web Workers, para que la página no se congele con archivos grandes. Exporta a CSV o Excel con un registro de cambios.</li>
+          <li data-i18n="dana_4">Tiene plan gratuito y plan Pro con pagos por Stripe, funciones en Vercel y pruebas automatizadas con Vitest.</li>
+        </ul>
+        <div class="stack"><span>React</span><span>TypeScript</span><span>Vite</span><span>Web Workers</span><span>ExcelJS</span><span>Vitest</span><span>Vercel</span><span>Stripe</span></div>
+        <div class="plinks">
+          <a class="xbtn" href="https://exel-analizer.vercel.app" target="_blank" rel="noopener"><span data-i18n="see_demo">Probar la demo</span> <span class="arr" aria-hidden="true">→</span></a>
+          <span class="note" data-i18n="dana_private">El código es privado. Con gusto lo muestro en una entrevista.</span>
+        </div>
+      </div>
+    </article>
+
+    <article class="project">
+      <div>
+        <h3 data-i18n="data_title">Datos y BI</h3>
+        <p class="kind" data-i18n="data_kind">IPN-ESCOM · 2025 a la fecha</p>
+        <span class="tag school" data-i18n="tag_school">Académico</span>
+      </div>
+      <div>
+        <p class="desc" data-i18n="data_desc">Proyectos de la carrera de Ciencia de Datos.</p>
+        <ul>
+          <li data-i18n="data_1">Diseño de data warehouses con modelo dimensional y procesos ETL para generar reportes.</li>
+          <li data-i18n="data_2">Bases de datos NoSQL: MongoDB para documentos y Neo4j para grafos.</li>
+          <li data-i18n="data_3">Análisis de datos con Python (Pandas, NumPy, Polars) y SQL, y tableros en Power BI.</li>
+        </ul>
+        <div class="plinks"><a class="xbtn big" href="https://github.com/Lycanites?tab=repositories" target="_blank" rel="noopener"><svg class="gh" viewBox="0 0 16 16" aria-hidden="true"><path fill="currentColor" d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38v-1.33c-2.23.48-2.7-1.07-2.7-1.07-.36-.92-.89-1.17-.89-1.17-.73-.5.06-.49.06-.49.8.06 1.23.83 1.23.83.72 1.22 1.87.87 2.33.66.07-.52.28-.87.5-1.07-1.78-.2-3.65-.89-3.65-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82a7.6 7.6 0 0 1 4 0c1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48v2.2c0 .21.15.46.55.38A8 8 0 0 0 16 8c0-4.42-3.58-8-8-8z"/></svg><span data-i18n="see_repos">Ver repositorios</span> <span class="arr" aria-hidden="true">→</span></a></div>
+      </div>
+    </article>
+
+    <figure class="viz" id="viz">
+      <div class="viz-top">
+        <div>
+          <b data-i18n="vz_title">Ejemplo de tablero: usuarios por canal</b>
+          <span data-i18n="vz_note">Datos ficticios, solo para ilustrar</span>
+        </div>
+        <div class="seg viz-modes" role="group" aria-label="Vista">
+          <button type="button" id="vm-stack" data-mode="stack" aria-pressed="true" data-i18n="vm_stack">Apilado</button>
+          <button type="button" id="vm-stream" data-mode="stream" aria-pressed="false" data-i18n="vm_stream">Flujo</button>
+          <button type="button" id="vm-expand" data-mode="expand" aria-pressed="false" data-i18n="vm_expand">Proporcional</button>
+        </div>
+      </div>
+      <div class="viz-legend" id="viz-legend"></div>
+      <div class="viz-plot"><svg id="viz-svg" viewBox="0 0 900 380" role="img" aria-label="Gráfica de áreas apiladas con datos ficticios"></svg><div class="viz-tip" id="viz-tip" hidden></div></div>
+    </figure>
+  </section>
+
+  <div class="duo">
+    <section id="experiencia" class="panel job" data-logo="git">
+      <div>
+        <div class="sec-head"><h2 data-i18n="h_exp">Experiencia</h2></div>
+        <p class="when">2023 – 2025</p>
+        <h3 data-i18n="job_title">Desarrollador Full Stack</h3>
+        <p class="org">DENKO Company Limited · Ciudad de México</p>
+        <ul>
+          <li data-i18n="job_1">Desarrollador principal de Logus.</li>
+          <li data-i18n="job_2">Coordiné la planeación del proyecto con Scrum durante dos años: backlog, sprints, revisiones y seguimiento de KPIs.</li>
+          <li data-i18n="job_3">Capacité al equipo en el uso de Git y GitHub: ramas, pull requests y revisión de código antes de integrar cambios.</li>
+          <li data-i18n="job_4">Participé en todas las capas del producto: interfaz, API, funciones en tiempo real y base de datos.</li>
+        </ul>
+      </div>
+    </section>
+
+    <section id="sobre-mi" class="panel about" data-logo="python">
+      <div>
+        <div class="sec-head"><h2 data-i18n="h_about">Sobre mí</h2></div>
+        <p data-i18n="about_1">Empecé a programar a los 15 años con Java. Desde entonces aprendo de la misma forma: elijo un lenguaje y construyo un proyecto real con él.</p>
+        <p data-i18n="about_2">Me gusta trabajar en equipo y mantener los procesos ordenados. Cuando una tarea se repite, busco la manera de automatizarla.</p>
+        <dl>
+          <dt data-i18n="d_edu">Estudios</dt><dd data-i18n="d_edu_v">Lic. en Ciencia de Datos, IPN-ESCOM (en curso)</dd>
+          <dt data-i18n="d_lang">Idiomas</dt><dd data-i18n="d_lang_v">Español nativo · Inglés C1</dd>
+          <dt data-i18n="d_loc">Ubicación</dt><dd data-i18n="d_loc_v">Ciudad de México</dd>
+          <dt data-i18n="d_mode">Modalidad</dt><dd data-i18n="d_mode_v">Presencial, híbrido o remoto</dd>
+        </dl>
+      </div>
+    </section>
+  </div>
+
+  <section id="habilidades" class="panel">
+    <div class="sec-head"><h2 data-i18n="h_soft">Habilidades blandas</h2></div>
+    <div class="soft">
+      <div class="soft-card purple"><span class="soft-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M16 19v-1a4 4 0 0 0-4-4H6a4 4 0 0 0-4 4v1 M9 10a3 3 0 1 0 0-6 3 3 0 0 0 0 6 M22 19v-1a4 4 0 0 0-3-3.9 M16 4.1a3 3 0 0 1 0 5.8"/></svg></span><h3 data-i18n="sk_team">Trabajo en equipo</h3><p data-i18n="sk_team_p">Dos años colaborando en un equipo de seis personas en DENKO.</p></div>
+      <div class="soft-card blue"><span class="soft-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M12 2l3 6 6 .9-4.5 4.3 1 6.3L12 16.5 6.5 19.5l1-6.3L3 8.9 9 8z"/></svg></span><h3 data-i18n="sk_lead">Liderazgo técnico</h3><p data-i18n="sk_lead_p">Fui el desarrollador principal de Logus y guié decisiones del producto.</p></div>
+      <div class="soft-card purple"><span class="soft-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M2 7l10-4 10 4-10 4z M6 9v5c0 1.7 2.7 3 6 3s6-1.3 6-3V9 M22 7v6"/></svg></span><h3 data-i18n="sk_teach">Capacitación</h3><p data-i18n="sk_teach_p">Enseñé al equipo a usar Git y GitHub y estandaricé el flujo de trabajo.</p></div>
+      <div class="soft-card blue"><span class="soft-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M8 2v4 M16 2v4 M3 9h18 M5 4h14a2 2 0 0 1 2 2v13a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2z M8 14l2 2 4-4"/></svg></span><h3 data-i18n="sk_plan">Organización y planeación</h3><p data-i18n="sk_plan_p">Coordiné sprints, backlog y seguimiento de KPIs con Scrum.</p></div>
+      <div class="soft-card purple"><span class="soft-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 12a8 8 0 0 1-11.5 7.2L4 21l1.8-5.5A8 8 0 1 1 21 12z M8 11h8 M8 14h5"/></svg></span><h3 data-i18n="sk_comm">Comunicación bilingüe</h3><p data-i18n="sk_comm_p">Inglés C1 y español nativo, cómodo en equipos remotos.</p></div>
+      <div class="soft-card blue"><span class="soft-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M9 18h6 M10 22h4 M12 2a7 7 0 0 0-4 12.7V16h8v-1.3A7 7 0 0 0 12 2z"/></svg></span><h3 data-i18n="sk_learn">Aprendizaje autónomo</h3><p data-i18n="sk_learn_p">Programo desde los 15 años y aprendo construyendo proyectos reales.</p></div>
+      <div class="soft-card purple"><span class="soft-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M14.7 6.3a4 4 0 0 0-5.4 5.4L3 18l3 3 6.3-6.3a4 4 0 0 0 5.4-5.4l-2.5 2.5-2.4-.6-.6-2.4z"/></svg></span><h3 data-i18n="sk_solve">Resolución de problemas</h3><p data-i18n="sk_solve_p">Cuando una tarea se repite, busco cómo automatizarla.</p></div>
+      <div class="soft-card blue"><span class="soft-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M21 12a9 9 0 1 1-3-6.7 M21 3v6h-6"/></svg></span><h3 data-i18n="sk_adapt">Adaptabilidad</h3><p data-i18n="sk_adapt_p">Paso de frontend a backend o a datos según lo que necesite el proyecto.</p></div>
+    </div>
+  </section>
+
+  <section id="tecnologias" class="panel">
+    <div class="sec-head"><h2 data-i18n="h_skills">Tecnologías</h2></div>
+    <div class="jump" id="jump" aria-label="Áreas"></div>
+    <div id="tech-groups" class="cats"></div>
+    <div class="ai" id="g-ai">
+      <div class="ai-head">
+        <span class="ai-ic"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="currentColor" d="M12 2l1.8 5.2L19 9l-5.2 1.8L12 16l-1.8-5.2L5 9l5.2-1.8zM19 14l.9 2.6 2.6.9-2.6.9L19 21l-.9-2.6-2.6-.9 2.6-.9zM5 15l.7 1.8 1.8.7-1.8.7L5 20l-.7-1.8-1.8-.7 1.8-.7z"/></svg></span>
+        <div>
+          <span class="ai-badge" data-i18n="ai_badge">En exploración</span>
+          <h3 data-i18n="ai_title">Desarrollo con Inteligencia Artificial</h3>
+        </div>
+      </div>
+      <p class="ai-lede" data-i18n="ai_lede">Estoy explorando nuevas formas de desarrollar software con IA. Ya la uso todos los días en mi trabajo y ahora busco llevarla más allá: integrarla dentro de las aplicaciones que construyo.</p>
+      <div class="ai-cols">
+        <div>
+          <h4 data-i18n="ai_have">Lo que ya hago</h4>
+          <ul>
+            <li data-i18n="ai_h1">Programo con asistentes de IA para escribir, revisar y depurar código más rápido.</li>
+            <li data-i18n="ai_h2">Genero pruebas y documentación con apoyo de IA y reviso cada resultado.</li>
+            <li data-i18n="ai_h3">Uso IA para analizar datos y preparar reportes con Python y SQL.</li>
+          </ul>
+        </div>
+        <div>
+          <h4 data-i18n="ai_next">Lo que estoy explorando</h4>
+          <ul>
+            <li data-i18n="ai_n1">Integrar modelos de lenguaje en aplicaciones web mediante APIs.</li>
+            <li data-i18n="ai_n2">Automatizar tareas repetitivas con agentes de IA.</li>
+            <li data-i18n="ai_n3">Combinar ciencia de datos e IA para encontrar patrones y hacer predicciones.</li>
+          </ul>
+        </div>
+      </div>
+      <div class="ai-tools">
+        <span><img data-icon="claude" alt="">Claude</span>
+        <span><img data-icon="copilot" alt="">GitHub Copilot</span>
+        <span><img data-icon="python" alt="">Python</span>
+      </div>
+    </div>
+  </section>
+
+  <section id="contacto" class="panel contact" data-logo="github">
+    <div>
+      <p class="label" data-i18n="c_eyebrow">Contacto</p>
+      <h2 class="mt-12"><span data-i18n="c_title">¿Tienes un proyecto o una vacante?</span> <em data-i18n="c_title2">Conversemos.</em></h2>
+      <p class="sub" data-i18n="c_sub">Respondo pronto. El correo es la mejor vía, aunque también puedes llamarme o escribirme por WhatsApp.</p>
+      <div class="rows">
+        <div class="row"><span class="k">Email</span><span class="v">andrehc958@gmail.com</span><button type="button" id="copy-mail" data-copy="andrehc958@gmail.com" data-i18n="copy">Copiar</button></div>
+        <div class="row"><span class="k" data-i18n="c_phone">Teléfono</span><span class="v">+52 55 1939 8759</span><button type="button" id="copy-tel" data-copy="+52 55 1939 8759" data-i18n="copy">Copiar</button></div>
+        <div class="row"><span class="k">GitHub</span><a class="v" href="https://github.com/Lycanites" target="_blank" rel="noopener">github.com/Lycanites</a></div>
+        <div class="row"><span class="k">LinkedIn</span><a class="v" href="https://www.linkedin.com/in/andre-hernandez958/" target="_blank" rel="noopener">in/andre-hernandez958</a></div>
+      </div>
+    </div>
+  </section>
+</main>
+
+<a class="fab-contact" href="#contacto" id="fab"><svg viewBox="0 0 24 24" aria-hidden="true"><path fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" d="M4 6h16v12H4z M4 7l8 6 8-6"/></svg><span data-i18n="fab">Contacto</span></a>
+<button type="button" class="to-top" id="to-top" aria-label="Volver arriba" hidden>↑</button>
+
+<footer>
+  <div class="wrap">© 2026 André Alain Hernández Castañeda</div>
+</footer>
+
+<script src="js/main.js"></script>
+</body>
 </html>
